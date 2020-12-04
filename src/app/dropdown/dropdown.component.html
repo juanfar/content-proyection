@@ -1,0 +1,20 @@
+<div class="dropdown">
+  <div class="label">
+    <ng-container *ngTemplateOutlet="labelTemplate ? labelTemplate : defaultLabel"></ng-container>
+  </div>
+  <div *ngIf="isOpen" class="options">
+    <ng-container *ngTemplateOutlet="optionsTemplate ? optionsTemplate : defaultOptions"></ng-container>
+  </div>
+</div>
+
+<ng-template #defaultLabel>
+  <div class="dp-label" (click)="openCloseOptions()">Selecciona una opción...</div>
+</ng-template>
+
+<ng-template #defaultOptions>
+  <ul class="dp-options">
+    <li>option 1</li>
+    <li>option 2</li>
+    <li>option 3</li>
+  </ul>
+</ng-template>
